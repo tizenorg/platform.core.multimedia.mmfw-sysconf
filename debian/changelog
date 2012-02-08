@@ -1,3 +1,11 @@
+mmfw-sysconf (0.1.17-0) unstable; urgency=low
+
+  * [ALL/camera] Remove unused and add something new
+  * Git: pkgs/m/mmfw-sysconf
+  * Tag: mmfw-sysconf_0.1.17-0
+
+ -- Jeongmo Yang <jm80.yang@samsung.com>  Wed, 08 Feb 2012 20:39:47 +0900
+
 mmfw-sysconf (0.1.16-0) unstable; urgency=low
 
   * Initial release
