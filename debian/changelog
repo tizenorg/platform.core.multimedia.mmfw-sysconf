@@ -1,7 +1,7 @@
-mmfw-sysconf (0.1.20-0) unstable; urgency=low
+mmfw-sysconf (0.1.21-0) unstable; urgency=low
 
   * Initial release
   * Git: pkgs/m/mmfw-sysconf
-  * Tag: mmfw-sysconf_0.1.20-0
+  * Tag: mmfw-sysconf_0.1.21-0
 
  -- Seongho Jeong <sh33.jeong@samsung.com>  Fri, 03 Feb 2012 15:17:36 +0900
