@@ -1,7 +1,7 @@
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
 Version:    0.1.22
-Release:    1
+Release:    3
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
@@ -9,13 +9,24 @@ Source0:    %{name}-%{version}.tar.gz
 %description
 Multimedia Framework system configuration package
 
+%ifarch %{arm}
+%package -n mmfw-sysconf-cleansdk-target
+Summary:    Multimedia Framework system configuration package for clean SDK target binary
+Group:      TO_BE/FILLED_IN
 
-%package simulator
+%description -n mmfw-sysconf-cleansdk-target
+Multimedia Framework system configuration package for clean SDK target binary
+
+%else
+
+%package -n mmfw-sysconf-simulator
 Summary:    Multimedia Framework system configuration package for simulator
 Group:      TO_BE/FILLED_IN
 
-%description simulator
+%description -n mmfw-sysconf-simulator
 Multimedia Framework system configuration package for simulator
+%endif
+
 
 
 %prep
@@ -24,14 +35,37 @@ Multimedia Framework system configuration package for simulator
 %build
 
 %install
-mkdir -p %{buildroot}%{_sysconfdir}/
-cp -rf  mmfw-sysconf-simulator/etc/* %{buildroot}%{_sysconfdir}/
+rm -rf %{buildroot}
 
-mkdir -p %{buildroot}/opt/etc/mmfw-sysconf/mmfw-sysconf-simulator
-cp -rf  mmfw-sysconf-simulator/opt/etc/* %{buildroot}/opt/etc/
+%ifarch %{arm}
+	mkdir -p %{buildroot}/opt/etc/mmfw-sysconf
+	cp -arf mmfw-sysconf-cleansdk-target/* %{buildroot}
+%else
+	mkdir -p %{buildroot}/opt/etc/mmfw-sysconf
+	cp -arf mmfw-sysconf-simulator/* %{buildroot}
+%endif
 
+%post 
 
-%files simulator
-%{_sysconfdir}/asound.conf
-/opt/etc/*
+%postun 
+
+%ifarch %{arm}
+%files -n mmfw-sysconf-cleansdk-target
+%defattr(-,root,root,-)
+/etc/asound.conf
 /etc/pulse/*
+/usr/etc/*.ini
+/usr/share/pulseaudio/alsa-mixer/paths/*.conf
+/usr/share/pulseaudio/alsa-mixer/paths/*.common
+/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
+%else
+
+%files -n mmfw-sysconf-simulator
+%defattr(-,root,root,-)
+/etc/asound.conf
+/etc/pulse/*
+/usr/etc/*.ini
+/usr/share/pulseaudio/alsa-mixer/paths/*.conf
+/usr/share/pulseaudio/alsa-mixer/paths/*.common
+/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
+%endif
