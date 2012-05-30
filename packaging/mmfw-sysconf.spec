@@ -5,6 +5,7 @@ Release:    3
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
+Source1001: packaging/mmfw-sysconf.manifest 
 
 %description
 Multimedia Framework system configuration package
@@ -33,6 +34,7 @@ Multimedia Framework system configuration package for simulator
 %setup -q 
 
 %build
+cp %{SOURCE1001} .
 
 %install
 rm -rf %{buildroot}
@@ -51,6 +53,7 @@ rm -rf %{buildroot}
 
 %ifarch %{arm}
 %files -n mmfw-sysconf-cleansdk-target
+%manifest mmfw-sysconf.manifest
 %defattr(-,root,root,-)
 /etc/asound.conf
 /etc/pulse/*
@@ -61,6 +64,7 @@ rm -rf %{buildroot}
 %else
 
 %files -n mmfw-sysconf-simulator
+%manifest mmfw-sysconf.manifest
 %defattr(-,root,root,-)
 /etc/asound.conf
 /etc/pulse/*
