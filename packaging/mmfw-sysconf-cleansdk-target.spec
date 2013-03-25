@@ -1,6 +1,6 @@
 Name:       mmfw-sysconf-cleansdk-target
 Summary:    Multimedia Framework system configuration package
-Version:    0.1.60
+Version:    0.1.61
 Release:    0
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
