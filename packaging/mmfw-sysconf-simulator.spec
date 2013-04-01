@@ -1,6 +1,6 @@
 Name:       mmfw-sysconf-simulator
 Summary:    Multimedia Framework system configuration package
-Version:    0.1.62
+Version:    0.1.63
 Release:    0
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
