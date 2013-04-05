@@ -1,6 +1,6 @@
 Name:       mmfw-sysconf-cleansdk-e4x12
 Summary:    Multimedia Framework system configuration package
-Version:    0.1.63
+Version:    0.1.64
 Release:    0
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
