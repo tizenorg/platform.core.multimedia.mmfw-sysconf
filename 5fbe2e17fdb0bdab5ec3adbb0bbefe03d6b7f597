@@ -1,0 +1,8 @@
+Change-Id: I5fbe2e17fdb0bdab5ec3adbb0bbefe03d6b7f597
+Code-Review+2: Prajwal Mohan <prajwal.karur.mohan@intel.com>
+Verified+1: Prajwal Mohan <prajwal.karur.mohan@intel.com>
+Submitted-by: Prajwal Mohan <prajwal.karur.mohan@intel.com>
+Submitted-at: Thu, 25 Apr 2013 14:12:02 -0700
+Reviewed-on: https://review.tizen.org/gerrit/3467
+Project: framework/multimedia/mmfw-sysconf
+Branch: refs/heads/tizen_2.1
