@@ -5,7 +5,8 @@ Release:    0
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    mmfw-sysconf-%{version}.tar.gz
-ExclusiveArch:  %{ix86}
+ExcludeArch: %{ix86}
+ExcludeArch: %{arm}
 
 %description
 Multimedia Framework system configuration package for simulator
@@ -22,5 +23,4 @@ Multimedia Framework system configuration package for simulator
 %postun 
 
 %files
-%manifest mmfw-sysconf.manifest
 %defattr(-,root,root,-)
