@@ -5,6 +5,7 @@ Release:    0
 Group:      TO_BE/FILLED_IN
 License:    Apache-2.0
 Source0:    mmfw-sysconf-%{version}.tar.gz
+Source1001: %{name}.manifest
 ExclusiveArch:  %arm
 
 %description
@@ -12,6 +13,7 @@ Multimedia Framework system configuration package
 
 %prep
 %setup -q -n mmfw-sysconf-%{version}
+cp %{SOURCE1001} .
 
 %build
 
@@ -26,7 +28,7 @@ cp -arf mmfw-sysconf-cleansdk-e4x12/* %{buildroot}
 %postun 
 
 %files
-%manifest mmfw-sysconf-cleansdk-e4x12.manifest
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 /etc/asound.conf
 /etc/pulse/*
