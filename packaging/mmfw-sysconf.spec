@@ -1,7 +1,7 @@
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
 Version:    0.2.0
-Release:    0
+Release:    1
 Group:      Multimedia/Configuration
 License:    Apache-2.0
 Source0:    mmfw-sysconf-%{version}.tar.gz
@@ -10,7 +10,7 @@ Source0:    mmfw-sysconf-%{version}.tar.gz
 Multimedia Framework system configuration package including ini, conf and etc files.
 
 
-%ifarch %{arm}
+%ifarch %arm aarch64
 
 %package target-u3
 Summary: Multimedia Framework system configuration package for u3
@@ -44,8 +44,9 @@ Multimedia Framework system configuration package including ini, conf and etc fi
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_datadir}
 
+echo arch
 
-%ifarch %{arm}
+%ifarch %arm aarch64
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3
 cp -arf %{name}-target-u3/* %{buildroot}%{_datadir}/%{name}-target-u3
@@ -64,7 +65,7 @@ cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-simulator/usr/share/lice
 %endif
 
 
-%ifarch %{arm}
+%ifarch %arm aarch64
 
 %post target-u3
 cp -arf %{_datadir}/mmfw-sysconf-target-u3/* /
@@ -82,7 +83,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %postun
 
 
-%ifarch %{arm}
+%ifarch %arm aarch64
 
 %files target-u3
 %manifest mmfw-sysconf-target-u3.manifest
