@@ -1,7 +1,7 @@
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.0
-Release:    3
+Version:    0.2.1
+Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
 Source0:    mmfw-sysconf-%{version}.tar.gz
