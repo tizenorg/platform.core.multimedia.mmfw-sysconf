@@ -1,6 +1,8 @@
+%bcond_with wayland
+
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.1
+Version:    0.2.2
 Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
@@ -49,6 +51,17 @@ mkdir -p %{buildroot}%{_datadir}
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3
 cp -arf %{name}-target-u3/* %{buildroot}%{_datadir}/%{name}-target-u3
+%if %{with wayland}
+mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.x
+%else
+mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.x %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.x %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.wayland
+rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.wayland
+%endif
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
@@ -57,6 +70,17 @@ cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/lice
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-simulator
 cp -arf %{name}-simulator/* %{buildroot}%{_datadir}/%{name}-simulator
+%if %{with wayland}
+mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.x
+%else
+mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.x %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.x %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.wayland
+rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.wayland
+%endif
 mkdir -p %{buildroot}%{_datadir}/%{name}-simulator/usr/share/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-simulator/usr/share/license/%{name}-simulator
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-simulator/usr/share/license/%{name}-simulator
