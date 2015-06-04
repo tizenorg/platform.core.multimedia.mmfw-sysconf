@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.2
+Version:    0.2.3
 Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
@@ -21,6 +21,14 @@ License: Apache-2.0
 
 %description target-u3
 Multimedia Framework system configuration package including ini, conf and etc files for u3 target.
+
+%package target-n4
+Summary: Multimedia Framework system configuration package for n4
+Group: Multimedia/Configuration
+License: Apache-2.0
+
+%description target-n4
+Multimedia Framework system configuration package including ini, conf and etc files for n4 target.
 
 %else
 
@@ -66,6 +74,17 @@ mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
 
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-n4
+cp -arf %{name}-target-u3/* %{buildroot}%{_datadir}/%{name}-target-n4
+mv %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-n4/usr/share/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-n4/usr/share/license/%{name}-target-n4
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-n4/usr/share/license/%{name}-target-n4
+
+
 %else
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-simulator
@@ -94,6 +113,10 @@ cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-simulator/usr/share/lice
 cp -arf %{_datadir}/mmfw-sysconf-target-u3/* /
 rm -rf %{_datadir}/mmfw-sysconf-target-u3
 
+%post target-n4
+cp -arf %{_datadir}/mmfw-sysconf-target-n4/* /
+rm -rf %{_datadir}/mmfw-sysconf-target-n4
+
 %else
 
 %post simulator
@@ -121,6 +144,20 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
 %{_datadir}/mmfw-sysconf-target-u3/opt/system/*
 %{_datadir}/mmfw-sysconf-target-u3/usr/share/license/mmfw-sysconf-target-u3
+
+%files target-n4
+%manifest mmfw-sysconf-target-n4.manifest
+%defattr(-,root,root,-)
+%{_datadir}/mmfw-sysconf-target-n4/etc/asound.conf
+%{_datadir}/mmfw-sysconf-target-n4/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-n4/usr/etc/*.ini
+%{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-n4/opt/system/*
+%{_datadir}/mmfw-sysconf-target-n4/usr/share/license/mmfw-sysconf-target-n4
 
 %else
 
