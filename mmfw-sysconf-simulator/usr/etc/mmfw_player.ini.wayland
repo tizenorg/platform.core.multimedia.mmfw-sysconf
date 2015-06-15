@@ -55,7 +55,7 @@ eos delay = 150 ; msec
 httpsrc element = souphttpsrc
 
 ; if set, use file or not use memory for buffering
-http file buffer path = /opt/usr/media
+http file buffer path = /home/owner/content
 
 http buffering limit = 99.0 ; percent
 
