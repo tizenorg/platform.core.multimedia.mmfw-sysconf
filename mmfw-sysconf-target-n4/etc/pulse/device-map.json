@@ -1,0 +1,86 @@
+{
+	"device-types":[
+		{
+			"device-type":"builtin-speaker",
+			"builtin" : true,
+			"direction":["out"],
+			"avail-condition":["pulse"],
+			"playback-devices":{"normal":"alsa:0,0"}
+		},
+		{
+			"device-type":"builtin-receiver",
+			"builtin" : true,
+			"direction":["out"],
+			"avail-condition":["pulse"],
+			"playback-devices":{"normal":"alsa:0,0"}
+		},
+		{
+			"device-type":"builtin-mic",
+			"builtin" : true,
+			"direction":["in"],
+			"avail-condition":["pulse"],
+			"capture-devices":{"normal":"alsa:0,0"}
+		},
+		{
+			"device-type":"audio-jack",
+			"builtin":false,
+			"direction":["both","out"],
+			"avail-condition":["pulse","dbus"],
+			"playback-devices":{"normal":"alsa:0,0"},
+			"capture-devices":{"normal":"alsa:0,0"}
+		},
+		{
+			"device-type":"hdmi",
+			"builtin":false,
+			"direction":["out"],
+			"avail-condition":["pulse, dbus"],
+			"playback-devices":{"normal":"alsa:0,0"}
+		},
+		{
+			"device-type":"bt",
+			"profile":"a2dp",
+			"builtin":false,
+			"direction":["out"],
+			"avail-condition":["pulse"]
+		},
+		{
+			"device-type":"bt",
+			"profile":"sco",
+			"builtin":false,
+			"direction":["both"],
+			"avail-condition":["pulse","dbus"],
+			"playback-devices":{"normal":"alsa:0,0"},
+			"capture-devices":{"normal":"alsa:0,0"}
+		},
+		{
+			"device-type":"forwarding",
+			"builtin":false,
+			"direction":["out"],
+			"avail-condition":["pulse", "dbus"],
+			"playback-devices":{"normal":"alsa:0,0"},
+		},
+		{
+			"device-type":"usb-audio",
+			"builtin":false,
+			"direction":["both", "in", "out"],
+			"avail-condition":["pulse"]
+		}
+
+	],
+	"device-files":{
+		"playback-devices":[
+			{
+				"device-string":"alsa:0,0",
+				"role":{
+						"normal":"rate=44100",
+				}
+			}
+		],
+		"capture-devices":[
+			{
+				"device-string":"alsa:0,0",
+				"role":{"normal":"rate=44100"}
+			}
+		]
+	}
+}
