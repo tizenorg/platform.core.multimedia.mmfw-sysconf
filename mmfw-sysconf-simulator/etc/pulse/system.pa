@@ -25,7 +25,7 @@
 .else
 ### Alternatively use the static hardware detection module (for systems that
 ### lack HAL support)
-load-module module-detect
+#load-module module-detect
 .endif
 
 ### Load several protocols
@@ -60,7 +60,7 @@ load-module module-suspend-on-idle
 #load-module module-position-event-sounds
 
 ### Set default source (not to use alsa_sink monitor which is index 0)
-set-default-source alsa_input.0.analog-stereo
+#set-default-source alsa_input.0.analog-stereo
 
 load-module module-remap-sink sink_name=mono_alsa master=alsa_output.0.analog-stereo channels=1
 load-sample camera-shutter /usr/share/sounds/mm-camcorder/capture_shutter_02.wav
