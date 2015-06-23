@@ -75,7 +75,7 @@ cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-n4
-cp -arf %{name}-target-u3/* %{buildroot}%{_datadir}/%{name}-target-n4
+cp -arf %{name}-target-n4/* %{buildroot}%{_datadir}/%{name}-target-n4
 mv %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini
 mv %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini
 rm %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini.x
