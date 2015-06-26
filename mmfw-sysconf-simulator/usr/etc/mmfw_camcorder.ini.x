@@ -48,7 +48,7 @@ DisplayDevice = 0 || 0
 ; Videosink
 ;;; 0: X surface, 1: Evas surface, 2: GL surface, 3: NULL surface
 Videosink = 0,1,3 || 0
-VideosinkElementX = xvimagesink | 6,0 | draw-borders,0 | force-aspect-ratio,1 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0
+VideosinkElementX = xvimagesink | 7,0 | draw-borders,0 | force-aspect-ratio,1 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0 | draw-border,0
 VideosinkElementEvas = evasimagesink | 4,0 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0
 VideosinkElementNull = fakesink | 3,0 | qos,0 | sync,0 | enable-last-sample,0
 UseVideoscale = 0
