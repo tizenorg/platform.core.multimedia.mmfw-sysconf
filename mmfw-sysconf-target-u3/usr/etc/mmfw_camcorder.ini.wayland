@@ -36,9 +36,9 @@ UseZeroCopyFormat = 0
 DeviceCount = 1
 
 [AudioInput]
-AudiosrcElement = audiotestsrc | 4,0 | do-timestamp,1 | slave-method,3 | latency,0 | is-live,1
-;AudiosrcElement = alsasrc | 3,0 | do-timestamp,1 | slave-method,3 | latency,0
-AudiomodemsrcElement = voicedatasrcbin | 0,0
+AudioDevice = 0,1 || 0
+AudiosrcElement = pulsesrc | 2,0 | do-timestamp,1 | blocksize,640
+AudiomodemsrcElement = pulsesrc | 2,0 | do-timestamp,1 | blocksize,640
 
 [VideoOutput]
 ; DisplayDevice
