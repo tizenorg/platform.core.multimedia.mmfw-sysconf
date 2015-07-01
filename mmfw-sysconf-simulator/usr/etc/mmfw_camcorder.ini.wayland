@@ -38,8 +38,9 @@ UseZeroCopyFormat = 0
 DeviceCount = 2
 
 [AudioInput]
-AudiosrcElement = avsysaudiosrc | 3,0 | do-timestamp,1 | slave-method,3 | latency,0
-AudiomodemsrcElement = audiotestsrc | 2,0 | do-timestamp,1 | is-live,1
+AudioDevice = 0,1 || 0
+AudiosrcElement = pulsesrc | 2,0 | do-timestamp,1 | blocksize,640
+AudiomodemsrcElement = pulsesrc | 2,0 | do-timestamp,1 | blocksize,640
 
 [VideoOutput]
 ; DisplayDevice
