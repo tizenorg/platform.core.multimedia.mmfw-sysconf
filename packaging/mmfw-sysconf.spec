@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.6
+Version:    0.2.7
 Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
@@ -142,7 +142,6 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-u3/opt/system/*
 %{_datadir}/mmfw-sysconf-target-u3/usr/share/license/mmfw-sysconf-target-u3
 
 %files target-n4
@@ -156,7 +155,6 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-n4/opt/system/*
 %{_datadir}/mmfw-sysconf-target-n4/usr/share/license/mmfw-sysconf-target-n4
 
 %else
