@@ -32,7 +32,7 @@
 .ifexists module-esound-protocol-unix.so
 load-module module-esound-protocol-unix
 .endif
-load-module module-native-protocol-unix
+load-module module-native-protocol-unix auth-anonymous=1
 
 load-module module-bluetooth-discover
 
