@@ -8,7 +8,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["audio-jack","builtin-mic"],
 			"avail-out-devices":["forwarding","audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player","audio-io"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"system",
@@ -18,7 +18,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["forwarding","audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"alarm",
@@ -28,7 +28,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player","audio-io"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"notification",
@@ -38,7 +38,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player","audio-io"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"emergency",
@@ -48,7 +48,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["builtin-speaker"],
-			"avail-frameworks":["player","wav-player"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"voice-information",
@@ -58,7 +58,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player","audio-io"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"voice-recognition",
@@ -78,7 +78,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"ringtone-call",
@@ -88,7 +88,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
 			"role":"voip",
@@ -98,7 +98,7 @@
 			"is-hal-volume":{"in":0,"out":0},
 			"avail-in-devices":["builtin-mic","audio-jack","bt"],
 			"avail-out-devices":["builtin-receiver","builtin-speaker","audio-jack","bt"],
-			"avail-frameworks":["audio-io"],
+			"avail-frameworks":["audio-io","tone-player"],
 		},
 		{
 			"role":"call-voice",
@@ -108,7 +108,7 @@
 			"is-hal-volume":{"in":0,"out":1},
 			"avail-in-devices":["builtin-mic","audio-jack","bt"],
 			"avail-out-devices":["builtin-receiver","builtin-speaker","audio-jack","bt"],
-			"avail-frameworks":["sound-manager"],
+			"avail-frameworks":["sound-manager","tone-player"],
 		},
 		{
 			"role":"call-video",
@@ -118,7 +118,7 @@
 			"is-hal-volume":{"in":0,"out":1},
 			"avail-in-devices":["builtin-mic","audio-jack","bt"],
 			"avail-out-devices":["builtin-receiver","builtin-speaker","audio-jack","bt"],
-			"avail-frameworks":["sound-manager"],
+			"avail-frameworks":["sound-manager","tone-player"],
 		},
 		{
 			"role":"radio",
