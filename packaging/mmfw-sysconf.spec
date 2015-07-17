@@ -136,6 +136,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %defattr(-,root,root,-)
 %{_datadir}/mmfw-sysconf-target-u3/etc/asound.conf
 %{_datadir}/mmfw-sysconf-target-u3/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-u3/etc/profile.d/*
 %{_datadir}/mmfw-sysconf-target-u3/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-target-u3/usr/etc/gst-openmax.conf
 %{_datadir}/mmfw-sysconf-target-u3/usr/etc/gst-tz-openmax.conf
@@ -150,6 +151,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %defattr(-,root,root,-)
 %{_datadir}/mmfw-sysconf-target-n4/etc/asound.conf
 %{_datadir}/mmfw-sysconf-target-n4/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-n4/etc/profile.d/*
 %{_datadir}/mmfw-sysconf-target-n4/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-openmax.conf
 %{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-tz-openmax.conf
@@ -166,6 +168,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %defattr(-,root,root,-)
 %{_datadir}/mmfw-sysconf-simulator/etc/asound.conf
 %{_datadir}/mmfw-sysconf-simulator/etc/pulse/*
+%{_datadir}/mmfw-sysconf-simulator/etc/profile.d/*
 %{_datadir}/mmfw-sysconf-simulator/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-simulator/usr/etc/gst-openmax.conf
 %{_datadir}/mmfw-sysconf-simulator/usr/share/pulseaudio/alsa-mixer/paths/*.conf
