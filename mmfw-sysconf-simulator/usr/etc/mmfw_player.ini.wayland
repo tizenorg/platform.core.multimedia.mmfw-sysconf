@@ -11,6 +11,8 @@ disable segtrap = yes ; same effect with --gst-disable-segtrap
 videosink element x = waylandsink
 videosink element evas = evasimagesink
 videosink element fake = fakesink
+videosink element remote = shmsink
+videosrc element remote = shmsrc
 
 video converter element = ffmpegcolorspace
 
