@@ -17,7 +17,7 @@ videosrc element remote = shmsrc
 
 video converter element =
 
-audiosink element = alsasink
+audiosink element = pulsesink
 
 
 drmsrc element = filesrc
