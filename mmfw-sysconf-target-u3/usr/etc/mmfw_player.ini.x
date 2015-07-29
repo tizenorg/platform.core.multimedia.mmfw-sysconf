@@ -15,7 +15,7 @@ videosink element fake = fakesink
 
 video converter element =
 
-audiosink element = alsasink
+audiosink element = pulsesink
 
 
 drmsrc element = filesrc
