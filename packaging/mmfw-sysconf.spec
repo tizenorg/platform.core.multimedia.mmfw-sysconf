@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.9
+Version:    0.2.10
 Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
@@ -136,6 +136,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %defattr(-,root,root,-)
 %{_datadir}/mmfw-sysconf-target-u3/etc/asound.conf
 %{_datadir}/mmfw-sysconf-target-u3/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-u3/etc/murphy/*
 %{_datadir}/mmfw-sysconf-target-u3/etc/profile.d/*
 %{_datadir}/mmfw-sysconf-target-u3/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-target-u3/usr/etc/gst-openmax.conf
@@ -150,6 +151,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %defattr(-,root,root,-)
 %{_datadir}/mmfw-sysconf-target-n4/etc/asound.conf
 %{_datadir}/mmfw-sysconf-target-n4/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-n4/etc/murphy/*
 %{_datadir}/mmfw-sysconf-target-n4/etc/profile.d/*
 %{_datadir}/mmfw-sysconf-target-n4/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-openmax.conf
@@ -166,6 +168,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %defattr(-,root,root,-)
 %{_datadir}/mmfw-sysconf-simulator/etc/asound.conf
 %{_datadir}/mmfw-sysconf-simulator/etc/pulse/*
+%{_datadir}/mmfw-sysconf-simulator/etc/murphy/*
 %{_datadir}/mmfw-sysconf-simulator/etc/profile.d/*
 %{_datadir}/mmfw-sysconf-simulator/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-simulator/usr/etc/gst-openmax.conf
