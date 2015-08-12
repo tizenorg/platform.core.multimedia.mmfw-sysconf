@@ -38,7 +38,7 @@ load-module module-policy
 #.endif
 
 ### Sound Player module
-load-module module-sound-player
+#load-module module-sound-player
 
 load-module module-role-ducking global=1 volume=0
 
