@@ -78,6 +78,12 @@ resource.class {
 }
 
 resource.class {
+     name = "video_decoder",
+     shareable = false,
+     sync_release = true
+}
+
+resource.class {
      name = "camera",
      shareable = false,
      sync_release = true
