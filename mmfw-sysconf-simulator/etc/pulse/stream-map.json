@@ -108,7 +108,7 @@
 			"volume-types":{"in":"none","out":"ringtone"},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io","sound-manager"],
 		},
 		{
 			"role":"ringtone-call",
@@ -126,7 +126,7 @@
 			"volume-types":{"in":"none","out":"voip"},
 			"avail-in-devices":["builtin-mic","audio-jack","bt"],
 			"avail-out-devices":["builtin-receiver","builtin-speaker","audio-jack","bt"],
-			"avail-frameworks":["audio-io","tone-player"],
+			"avail-frameworks":["audio-io","tone-player","sound-manager"],
 		},
 		{
 			"role":"call-voice",
