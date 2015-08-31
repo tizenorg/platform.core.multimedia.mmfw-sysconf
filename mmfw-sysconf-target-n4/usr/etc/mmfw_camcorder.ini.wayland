@@ -29,11 +29,11 @@ ModelName = GT-TIZEN
 UseConfCtrl = 1
 ConfCtrlFile0 = mmfw_camcorder_dev_video_pri.ini
 ConfCtrlFile1 = mmfw_camcorder_dev_video_sec.ini
-VideosrcElement = v4l2src | 1,0 | do-timestamp,1
+VideosrcElement = videotestsrc | 2,0 | do-timestamp,1 | is-live,1
 UseVideoscale = 1
 VideoscaleElement = videoscale | 3,0 | width,320 | height,240 | method,1
 UseZeroCopyFormat = 0
-DeviceCount = 1
+DeviceCount = 2
 
 [AudioInput]
 AudioDevice = 0,1 || 0
