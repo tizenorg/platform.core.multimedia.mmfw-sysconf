@@ -21,7 +21,7 @@
 
 ### Automatically load driver modules depending on the hardware available
 #.ifexists module-udev-detect.so
-#load-module module-udev-detect
+load-module module-udev-detect
 #.endif
 
 ### Load several protocols
@@ -54,7 +54,7 @@ load-module module-dbus-protocol access=local
 
 ### Automatically move streams to the default sink if the sink they are
 ### connected to dies, similar for sources
-load-module module-rescue-streams
+#load-module module-rescue-streams
 
 ### Make sure we always have a sink around, even if it is a null sink.
 load-module module-always-sink
@@ -62,6 +62,5 @@ load-module module-always-sink
 ### Automatically suspend sinks/sources that become idle for too long
 load-module module-suspend-on-idle timeout=1
 
-load-module module-null-sink
 load-sample camera-shutter /usr/share/sounds/mm-camcorder/capture_shutter_02.wav
 load-sample recording-stop /usr/share/sounds/mm-camcorder/recording_stop_01.wav
