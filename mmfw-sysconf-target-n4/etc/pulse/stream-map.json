@@ -152,7 +152,7 @@
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"media"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["builtin-speaker","audio-jack"],
+			"avail-out-devices":["audio-jack","builtin-speaker"],
 			"avail-frameworks":["sound-manager"],
 		},
 		{
@@ -163,6 +163,15 @@
 			"avail-in-devices":["forwarding"],
 			"avail-out-devices":["none"],
 			"avail-frameworks":["audio-io"],
+		},
+		{
+			"role":"ext-media",
+			"priority" : 3,
+			"route-type" : "manual",
+			"volume-types":{"in":"none","out":"media"},
+			"avail-in-devices":["none"],
+			"avail-out-devices":["bt"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 	]
 }
