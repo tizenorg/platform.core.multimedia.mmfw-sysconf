@@ -47,10 +47,11 @@ AudiomodemsrcElement = pulsesrc | 2,0 | do-timestamp,1 | blocksize,640
 ;;; 0: MAIN LCD, 1: SUB LCD, 2:TV OUT, 3: MAIN LCD and SUB LCD, 4: MAIN LCD and TV OUT
 DisplayDevice = 0 || 0
 ; Videosink
-;;; 0: X surface, 1: Evas surface, 2: GL surface, 3: NULL surface
-Videosink = 0,1,3 || 0
+;;; 0: X surface, 1: Evas surface, 2: GL surface, 3: NULL surface, 5: Remote
+Videosink = 0,1,3,5 || 0
 VideosinkElementX = xvimagesink | 6,0 | draw-borders,0 | force-aspect-ratio,1 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0
 VideosinkElementEvas = evasimagesink | 4,0 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0
+VideosinkElementRemote = shmsink | 5,0 | wait-for-connection,0 | perms,511 | enable-last-sample,0 | qos,0 | sync,0
 VideosinkElementNull = fakesink | 3,0 | qos,0 | sync,0 | enable-last-sample,0
 UseVideoscale = 0
 VideoscaleElement = videoscale | 1,0 | method,1
