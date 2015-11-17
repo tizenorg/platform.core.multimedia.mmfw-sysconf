@@ -67,7 +67,7 @@
 		},
 		{
 			"role":"notification",
-			"priority" : 3,
+			"priority" : 4,
 			"route-type" : "auto-all",
 			"volume-types":{"in":"none","out":"notification"},
 			"avail-in-devices":["none"],
