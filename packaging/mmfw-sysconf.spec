@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.24
+Version:    0.2.25
 Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
@@ -36,6 +36,14 @@ Group: Multimedia/Configuration
 License: Apache-2.0
 
 %description target-hawkp
+Multimedia Framework system configuration package including ini, conf and etc files for hawkp target.
+
+%package target-tm1
+Summary: Multimedia Framework system configuration package for tm1
+Group: Multimedia/Configuration
+License: Apache-2.0
+
+%description target-tm1
 Multimedia Framework system configuration package including ini, conf and etc files for hawkp target.
 
 
@@ -103,6 +111,16 @@ mkdir -p %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
 
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1
+cp -arf %{name}-target-hawkp/* %{buildroot}%{_datadir}/%{name}-target-tm1
+mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license/%{name}-target-tm1
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license/%{name}-target-tm1
+
 %else
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-simulator
@@ -138,6 +156,10 @@ rm -rf %{_datadir}/mmfw-sysconf-target-n4
 %post target-hawkp
 cp -arf %{_datadir}/mmfw-sysconf-target-hawkp/* /
 rm -rf %{_datadir}/mmfw-sysconf-target-hawkp
+
+%post target-tm1
+cp -arf %{_datadir}/mmfw-sysconf-target-tm1/* /
+rm -rf %{_datadir}/mmfw-sysconf-target-tm1
 
 %else
 
@@ -197,6 +219,21 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-hawkp/usr/share/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-hawkp/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
 %{_datadir}/mmfw-sysconf-target-hawkp/usr/share/license/mmfw-sysconf-target-hawkp
+
+%files target-tm1
+%manifest mmfw-sysconf-target-tm1.manifest
+%defattr(-,root,root,-)
+%{_datadir}/mmfw-sysconf-target-tm1/etc/asound.conf
+%{_datadir}/mmfw-sysconf-target-tm1/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-tm1/etc/murphy/*
+%{_datadir}/mmfw-sysconf-target-tm1/etc/profile.d/*
+%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/*.ini
+%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-tm1/usr/share/license/mmfw-sysconf-target-tm1
 
 %else
 
