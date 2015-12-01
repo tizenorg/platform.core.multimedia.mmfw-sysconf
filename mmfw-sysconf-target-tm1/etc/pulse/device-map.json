@@ -5,36 +5,36 @@
 			"builtin" : true,
 			"direction":["out"],
 			"avail-condition":["pulse"],
-			"playback-devices":{"normal":"alsa:0,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
 			"device-type":"builtin-receiver",
 			"builtin" : true,
 			"direction":["out"],
 			"avail-condition":["pulse"],
-			"playback-devices":{"normal":"alsa:0,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
 			"device-type":"builtin-mic",
 			"builtin" : true,
 			"direction":["in"],
 			"avail-condition":["pulse"],
-			"capture-devices":{"normal":"alsa:0,0"}
+			"capture-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
 			"device-type":"audio-jack",
 			"builtin":false,
 			"direction":["both","out"],
 			"avail-condition":["pulse","dbus"],
-			"playback-devices":{"normal":"alsa:0,0"},
-			"capture-devices":{"normal":"alsa:0,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0"},
+			"capture-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
 			"device-type":"hdmi",
 			"builtin":false,
 			"direction":["out"],
 			"avail-condition":["pulse, dbus"],
-			"playback-devices":{"normal":"alsa:0,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
 			"device-type":"bt",
@@ -49,15 +49,15 @@
 			"builtin":false,
 			"direction":["both"],
 			"avail-condition":["pulse","dbus"],
-			"playback-devices":{"normal":"alsa:0,0"},
-			"capture-devices":{"normal":"alsa:0,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0"},
+			"capture-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
 			"device-type":"forwarding",
 			"builtin":false,
 			"direction":["out"],
 			"avail-condition":["pulse", "dbus"],
-			"playback-devices":{"normal":"alsa:0,0"},
+			"playback-devices":{"normal":"alsa:sprdphone,0"},
 		},
 		{
 			"device-type":"usb-audio",
@@ -70,7 +70,7 @@
 	"device-files":{
 		"playback-devices":[
 			{
-				"device-string":"alsa:0,0",
+				"device-string":"alsa:sprdphone,0",
 				"role":{
 						"normal":"rate=44100",
 				}
@@ -78,7 +78,7 @@
 		],
 		"capture-devices":[
 			{
-				"device-string":"alsa:0,0",
+				"device-string":"alsa:sprdphone,0",
 				"role":{"normal":"rate=44100"}
 			}
 		]
