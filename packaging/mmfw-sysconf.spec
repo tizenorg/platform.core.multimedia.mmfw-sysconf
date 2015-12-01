@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.27
+Version:    0.2.28
 Release:    0
 Group:      Multimedia/Configuration
 License:    Apache-2.0
@@ -112,7 +112,7 @@ cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/licens
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1
-cp -arf %{name}-target-hawkp/* %{buildroot}%{_datadir}/%{name}-target-tm1
+cp -arf %{name}-target-tm1/* %{buildroot}%{_datadir}/%{name}-target-tm1
 mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini
 mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini
 rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.x
