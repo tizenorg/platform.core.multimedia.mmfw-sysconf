@@ -36,6 +36,7 @@ UseVideoscale = 0
 VideoscaleElement = videoscale | 3,0 | width,320 | height,240 | method,1
 UseZeroCopyFormat = 0
 DeviceCount = 2
+SupportMediaPacketPreviewCb = 0
 
 [AudioInput]
 AudioDevice = 0,1 || 0
@@ -46,6 +47,9 @@ AudiomodemsrcElement = pulsesrc | 2,0 | do-timestamp,1 | blocksize,640
 ; DisplayDevice
 ;;; 0: MAIN LCD, 1: SUB LCD, 2:TV OUT, 3: MAIN LCD and SUB LCD, 4: MAIN LCD and TV OUT
 DisplayDevice = 0 || 0
+; DisplayMode
+;;; 0: Default, 1: Pri Video ON and Sec Video Full-Screen, 2: Pri Video OFF and Sec Video Full-Screen
+DisplayMode = 0 || 0
 ; Videosink
 ;;; 0: X surface, 1: Evas surface, 2: GL surface, 3: NULL surface, 5: Remote
 Videosink = 0,1,3,5 || 0
@@ -57,13 +61,12 @@ UseVideoscale = 0
 VideoscaleElement = videoscale | 1,0 | method,1
 
 [VideoEncoder]
-H263 = emulenc_h263p | 0,0
-MPEG4 = emulenc_mpeg4 | 0,0
-THEORA = theoraenc | 1,0 | num-bufs,4
+H263 = avenc_h263p | 1,0 | compliance, -2
+MPEG4 = avenc_mpeg4 | 1,0 | compliance, -2
 
 [AudioEncoder]
 AMR = amrnbenc | 0,0
-AAC = ffenc_aac | 0,0
+AAC = avenc_aac | 1,0 | compliance, -2
 WAVE = wavenc | 0,0
 VORBIS = vorbisenc | 0,0
 
@@ -75,7 +78,7 @@ PNG = pngenc | 0,0
 UseEncodebin = 1
 UseCaptureMode = 0
 VideoscaleElement = videoscale | 1,0 | method,1
-PlayCaptureSound = 0
+PlayCaptureSound = 1
 
 [Record]
 UseAudioEncoderQueue = 1
@@ -83,7 +86,7 @@ UseVideoEncoderQueue = 1
 VideoProfile = 0
 VideoAutoAudioConvert = 1
 VideoAutoAudioResample = 0
-VideoAutoColorSpace = 0
+VideoAutoColorSpace = 1
 AudioProfile = 1
 AudioAutoAudioConvert = 1
 AudioAutoAudioResample = 0
@@ -98,10 +101,10 @@ DropVideoFrame = 0
 PassFirstVideoFrame = 0
 
 [Mux]
-3GP = ffmux_3gp | 0,0
-AMR = ffmux_amr | 0,0
-MP4 = ffmux_mp4 | 0,0
+3GP = avmux_3gp | 0,0
+AMR = avmux_amr | 0,0
+MP4 = avmux_mp4 | 0,0
 OGG = oggmux | 0,0
 WAV = wavenc | 0,0
-AAC = ffmux_adts | 0,0
+AAC = avmux_adts | 0,0
 
