@@ -2,7 +2,7 @@
 	"volumes":[
 		{
 			"type":"master",
-			"is-hal-volume":0,
+			"is-hal-volume":1,
 		},
 		{
 			"type":"media",
