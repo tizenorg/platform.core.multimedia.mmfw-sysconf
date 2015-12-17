@@ -230,6 +230,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-tm1/usr/etc/*.ini
 %{_datadir}/mmfw-sysconf-target-tm1/usr/etc/gst-openmax.conf
 %{_datadir}/mmfw-sysconf-target-tm1/usr/etc/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/audio_hw.xml
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
