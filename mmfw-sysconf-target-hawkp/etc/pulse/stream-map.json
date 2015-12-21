@@ -43,7 +43,7 @@
 			"priority" : 3,
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"media"},
-			"avail-in-devices":["audio-jack","builtin-mic"],
+			"avail-in-devices":["audio-jack","usb-audio","builtin-mic"],
 			"avail-out-devices":["forwarding","audio-jack","builtin-speaker","bt","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
