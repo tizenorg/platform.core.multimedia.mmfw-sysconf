@@ -3,9 +3,9 @@
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
 Version:    0.2.38
-Release:    0
+Release:    1
 Group:      Multimedia/Configuration
-License:    Apache-2.0
+License:    LGPL-2.1+ and Apache-2.0
 Source0:    mmfw-sysconf-%{version}.tar.gz
 
 %description
@@ -17,7 +17,7 @@ Multimedia Framework system configuration package including ini, conf and etc fi
 %package target-u3
 Summary: Multimedia Framework system configuration package for u3
 Group: Multimedia/Configuration
-License: Apache-2.0
+License: LGPL-2.1+ and Apache-2.0
 
 %description target-u3
 Multimedia Framework system configuration package including ini, conf and etc files for u3 target.
@@ -25,7 +25,7 @@ Multimedia Framework system configuration package including ini, conf and etc fi
 %package target-n4
 Summary: Multimedia Framework system configuration package for n4
 Group: Multimedia/Configuration
-License: Apache-2.0
+License: LGPL-2.1+ and Apache-2.0
 
 %description target-n4
 Multimedia Framework system configuration package including ini, conf and etc files for n4 target.
@@ -33,7 +33,7 @@ Multimedia Framework system configuration package including ini, conf and etc fi
 %package target-hawkp
 Summary: Multimedia Framework system configuration package for hawkp
 Group: Multimedia/Configuration
-License: Apache-2.0
+License: LGPL-2.1+ and Apache-2.0
 
 %description target-hawkp
 Multimedia Framework system configuration package including ini, conf and etc files for hawkp target.
@@ -41,7 +41,7 @@ Multimedia Framework system configuration package including ini, conf and etc fi
 %package target-tm1
 Summary: Multimedia Framework system configuration package for tm1
 Group: Multimedia/Configuration
-License: Apache-2.0
+License: LGPL-2.1+ and Apache-2.0
 
 %description target-tm1
 Multimedia Framework system configuration package including ini, conf and etc files for tm1 target.
@@ -52,7 +52,7 @@ Multimedia Framework system configuration package including ini, conf and etc fi
 %package simulator
 Summary: Multimedia Framework system configuration package for simulator
 Group: Multimedia/Configuration
-License: Apache-2.0
+License: LGPL-2.1+ and Apache-2.0
 
 %description simulator
 Multimedia Framework system configuration package including ini, conf and etc files for simulator.
