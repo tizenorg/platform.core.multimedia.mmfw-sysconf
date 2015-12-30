@@ -5,14 +5,14 @@
 			"builtin" : true,
 			"direction":["out"],
 			"avail-condition":["pulse"],
-			"playback-devices":{"normal":"alsa:sprdphone,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0", "call-voice":"alsa:VIRTUALAUDIOW,0"}
 		},
 		{
 			"device-type":"builtin-receiver",
 			"builtin" : true,
 			"direction":["out"],
 			"avail-condition":["pulse"],
-			"playback-devices":{"normal":"alsa:sprdphone,0"}
+			"playback-devices":{"normal":"alsa:sprdphone,0", "call-voice":"alsa:VIRTUALAUDIOW,0"}
 		},
 		{
 			"device-type":"builtin-mic",
@@ -26,7 +26,7 @@
 			"builtin":false,
 			"direction":["both","out"],
 			"avail-condition":["pulse","dbus"],
-			"playback-devices":{"normal":"alsa:sprdphone,0"},
+			"playback-devices":{"normal":"alsa:sprdphone,0", "call-voice":"alsa:VIRTUALAUDIOW,0"},
 			"capture-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
@@ -49,7 +49,7 @@
 			"builtin":false,
 			"direction":["both"],
 			"avail-condition":["pulse","dbus"],
-			"playback-devices":{"normal":"alsa:sprdphone,0"},
+			"playback-devices":{"normal":"alsa:sprdphone,0", "call-voice":"alsa:VIRTUALAUDIOW,0"},
 			"capture-devices":{"normal":"alsa:sprdphone,0"}
 		},
 		{
@@ -73,6 +73,12 @@
 				"device-string":"alsa:sprdphone,0",
 				"role":{
 						"normal":"rate=44100",
+				}
+			},
+			{
+				"device-string":"alsa:VIRTUALAUDIOW,0",
+				"role":{
+						"call-voice":"rate=16000 channels=1 tsched=0 alternate_rate=16000",
 				}
 			}
 		],
