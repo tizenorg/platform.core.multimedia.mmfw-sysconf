@@ -32,9 +32,6 @@ load-module module-policy
 load-module module-sound-player
 load-module module-role-ducking global=1 volume=0
 
-load-module module-bluetooth-policy
-load-module module-bluetooth-discover
-
 ### Automatically restore the volume of streams and devices
 #load-module module-stream-restore
 #load-module module-device-restore
