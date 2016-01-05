@@ -32,7 +32,7 @@ ConfCtrlFile1 = mmfw_camcorder_dev_video_sec.ini
 VideosrcElement = tvcamerasrc | 1,1 | do-timestamp,1 | device,/dev/video241
 UseVideoscale = 1
 VideoscaleElement = videoscale | 3,0 | width,320 | height,240 | method,1
-UseZeroCopyFormat = 1
+UseZeroCopyFormat = 0
 DeviceCount = 1
 
 [AudioInput]
