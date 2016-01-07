@@ -8,7 +8,7 @@ use sink handler = yes
 disable segtrap = yes ; same effect with --gst-disable-segtrap
 
 ; set default videosink element according to video surface type(X, EVAS, NULL)
-videosink element x = xvimagesink
+videosink element overlay = xvimagesink
 videosink element evas = evasimagesink
 videosink element fake = fakesink
 
