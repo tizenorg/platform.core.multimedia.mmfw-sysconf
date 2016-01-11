@@ -158,11 +158,20 @@
 		{
 			"role":"loopback",
 			"priority" : 3,
+			"route-type" : "manual",
+			"volume-types":{"in":"none","out":"none"},
+			"avail-in-devices":["usb"],
+			"avail-out-devices":["audio-jack","usb"],
+			"avail-frameworks":["sound-manager"],
+		},
+		{
+			"role":"loopback-mirroring",
+			"priority" : 3,
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"none"},
 			"avail-in-devices":["forwarding"],
-			"avail-out-devices":["none"],
-			"avail-frameworks":["audio-io"],
+			"avail-out-devices":["forwarding"],
+			"avail-frameworks":["none"],
 		},
 		{
 			"role":"ext-media",

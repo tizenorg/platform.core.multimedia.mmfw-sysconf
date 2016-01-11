@@ -167,11 +167,20 @@
 		{
 			"role":"loopback",
 			"priority" : 3,
+			"route-type" : "manual",
+			"volume-types":{"in":"none","out":"none"},
+			"avail-in-devices":["builtin-mic","usb"],
+			"avail-out-devices":["builtin-speaker"],
+			"avail-frameworks":["sound-manager"],
+		},
+		{
+			"role":"loopback-mirroring",
+			"priority" : 3,
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"none"},
 			"avail-in-devices":["forwarding"],
-			"avail-out-devices":["none"],
-			"avail-frameworks":["audio-io"],
+			"avail-out-devices":["forwarding"],
+			"avail-frameworks":["none"],
 		},
 		{
 			"role":"ext-media",

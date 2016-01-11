@@ -120,6 +120,15 @@
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
+			"role":"ringbacktone-call",
+			"priority" : 2,
+			"route-type" : "auto",
+			"volume-types":{"in":"none","out":"call"},
+			"avail-in-devices":["none"],
+			"avail-out-devices":["audio-jack","bt","builtin-receiver","builtin-speaker"],
+			"avail-frameworks":["wav-player","tone-player"],
+		},
+		{
 			"role":"voip",
 			"priority" : 5,
 			"route-type" : "manual",
@@ -135,7 +144,7 @@
 			"volume-types":{"in":"none","out":"call"},
 			"avail-in-devices":["builtin-mic","audio-jack","bt"],
 			"avail-out-devices":["builtin-receiver","builtin-speaker","audio-jack","bt"],
-			"avail-frameworks":["sound-manager","tone-player"],
+			"avail-frameworks":["sound-manager"],
 		},
 		{
 			"role":"call-video",
@@ -144,7 +153,7 @@
 			"volume-types":{"in":"none","out":"call"},
 			"avail-in-devices":["builtin-mic","audio-jack","bt"],
 			"avail-out-devices":["builtin-receiver","builtin-speaker","audio-jack","bt"],
-			"avail-frameworks":["sound-manager","tone-player"],
+			"avail-frameworks":["sound-manager"],
 		},
 		{
 			"role":"radio",
@@ -158,11 +167,20 @@
 		{
 			"role":"loopback",
 			"priority" : 3,
+			"route-type" : "manual",
+			"volume-types":{"in":"none","out":"none"},
+			"avail-in-devices":["builtin-mic","usb"],
+			"avail-out-devices":["builtin-speaker"],
+			"avail-frameworks":["sound-manager"],
+		},
+		{
+			"role":"loopback-mirroring",
+			"priority" : 3,
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"none"},
 			"avail-in-devices":["forwarding"],
-			"avail-out-devices":["none"],
-			"avail-frameworks":["audio-io"],
+			"avail-out-devices":["forwarding"],
+			"avail-frameworks":["none"],
 		},
 		{
 			"role":"ext-media",
