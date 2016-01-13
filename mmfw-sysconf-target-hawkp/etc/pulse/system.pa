@@ -57,5 +57,7 @@ load-module module-always-sink
 ### Automatically suspend sinks/sources that become idle for too long
 load-module module-suspend-on-idle timeout=1
 
-load-sample camera-shutter /usr/share/sounds/mm-camcorder/capture_shutter_02.wav
+load-sample camera-shutter-01 /usr/share/sounds/mm-camcorder/capture_shutter_01.wav
+load-sample camera-shutter-02 /usr/share/sounds/mm-camcorder/capture_shutter_02.wav
+load-sample recording-start /usr/share/sounds/mm-camcorder/recording_start_01.wav
 load-sample recording-stop /usr/share/sounds/mm-camcorder/recording_stop_01.wav
