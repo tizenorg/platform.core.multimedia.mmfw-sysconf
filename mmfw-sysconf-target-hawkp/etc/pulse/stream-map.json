@@ -157,7 +157,7 @@
 		},
 		{
 			"role":"loopback",
-			"priority" : 3,
+			"priority" : 2,
 			"route-type" : "manual",
 			"volume-types":{"in":"none","out":"none"},
 			"avail-in-devices":["usb"],
