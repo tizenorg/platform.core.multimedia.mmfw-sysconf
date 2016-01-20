@@ -107,4 +107,5 @@ MP4 = avmux_mp4 | 0,0
 OGG = oggmux | 0,0
 WAV = wavenc | 0,0
 AAC = avmux_adts | 0,0
+M2TS = mpegtsmux | 0,0
 

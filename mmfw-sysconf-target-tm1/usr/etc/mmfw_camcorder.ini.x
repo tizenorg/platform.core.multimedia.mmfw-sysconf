@@ -106,4 +106,5 @@ AVI = avimux | 0,0
 MATROSKA = matroskamux | 0,0
 WAV = wavenc | 0,0
 AAC = avmux_adts | 0,0
+M2TS = mpegtsmux | 0,0
 
