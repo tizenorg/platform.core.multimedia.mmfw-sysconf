@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.46
+Version:    0.2.47
 Release:    0
 Group:      Multimedia/Configuration
 License:    LGPL-2.1+ and Apache-2.0
@@ -111,10 +111,11 @@ mkdir -p %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
 
-mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1/usr/lib/udev/rules.d
 cp -arf %{name}-target-tm1/* %{buildroot}%{_datadir}/%{name}-target-tm1
 mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini
 mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini
+install -m 644 61-tizen-mm-device.rules %{buildroot}%{_datadir}/%{name}-target-tm1/usr/lib/udev/rules.d/61-tizen-mm-device.rules
 rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.x
 rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.x
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license
@@ -235,6 +236,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/license/mmfw-sysconf-target-tm1
+%{_datadir}/mmfw-sysconf-target-tm1/usr/lib/udev/rules.d/61-tizen-mm-device.rules
 
 %else
 
