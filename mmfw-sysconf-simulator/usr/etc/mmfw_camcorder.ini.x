@@ -52,9 +52,8 @@ DisplayDevice = 0 || 0
 DisplayMode = 0 || 0
 ; Videosink
 ;;; 0: Overlay surface, 1: Evas surface, 2: GL surface, 3: NULL surface, 4: Remote
-Videosink = 0,1,3,4 || 0
+Videosink = 0,3,4 || 3
 VideosinkElementOverlay = xvimagesink | 6,0 | draw-borders,0 | force-aspect-ratio,1 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0
-VideosinkElementEvas = evasimagesink | 4,0 | enable-last-sample,0 | qos,0 | sync,0 | show-preroll-frame,0
 VideosinkElementRemote = shmsink | 5,0 | wait-for-connection,0 | perms,511 | enable-last-sample,0 | qos,0 | sync,0
 VideosinkElementNull = fakesink | 3,0 | qos,0 | sync,0 | enable-last-sample,0
 UseVideoscale = 0
