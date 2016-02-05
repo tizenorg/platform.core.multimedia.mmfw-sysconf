@@ -96,7 +96,7 @@ PassFirstVideoFrame = 0
 [Mux]
 3GP = avmux_3gp | 0,0
 AMR = avmux_amr | 0,0
-MP4 = mp4mux | 0,0
+MP4 = avmux_mp4 | 0,0
 AVI = avimux | 0,0
 MATROSKA = matroskamux | 0,0
 WAV = wavenc | 0,0
