@@ -182,5 +182,14 @@
 			"avail-out-devices":["bt","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
+		{
+			"role":"solo",
+			"priority" : 2,
+			"route-type" : "auto",
+			"volume-types":{"in":"none","out":"none"},
+			"avail-in-devices":["none"],
+			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-frameworks":["wav-player","tone-player"],
+		},
 	]
 }

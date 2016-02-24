@@ -164,5 +164,14 @@
 			"avail-out-devices":["none"],
 			"avail-frameworks":["audio-io"],
 		},
+		{
+			"role":"solo",
+			"priority" : 2,
+			"route-type" : "auto",
+			"volume-types":{"in":"none","out":"none"},
+			"avail-in-devices":["none"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
+			"avail-frameworks":["wav-player","tone-player"],
+		},
 	]
 }

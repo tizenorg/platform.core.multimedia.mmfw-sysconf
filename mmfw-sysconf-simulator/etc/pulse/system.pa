@@ -30,7 +30,7 @@ load-module module-policy
 
 ### Sound Player module
 load-module module-sound-player
-load-module module-role-ducking global=1 volume=0
+load-module module-role-ducking global=1 trigger_roles=solo ducking_roles=media,system,alarm,notification,voice-information,ext-media volume=0%
 
 load-module module-bluetooth-policy
 load-module module-bluetooth-discover
