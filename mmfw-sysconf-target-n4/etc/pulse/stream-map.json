@@ -45,7 +45,7 @@
 			"volume-types":{"in":"none","out":"media"},
 			"avail-in-devices":["audio-jack","builtin-mic"],
 			"avail-out-devices":["forwarding","audio-jack","bt","builtin-speaker"],
-			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
+			"avail-frameworks":["player","wav-player","tone-player","audio-io","recorder"],
 		},
 		{
 			"role":"system",
