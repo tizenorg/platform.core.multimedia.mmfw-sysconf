@@ -30,7 +30,7 @@ load-module module-policy
 
 ### Sound Player module
 load-module module-sound-player
-load-module module-role-ducking global=1 trigger_roles=solo ducking_roles=media,system,alarm,notification,voice-information,ext-media volume=0%
+load-module module-role-ducking global=1 trigger_roles=solo/voice-information ducking_roles=media,system,alarm,notification,voice-information,ext-media/media,system,alarm,notification,ext-media volume=0%/30%
 
 ### Automatically restore the volume of streams and devices
 #load-module module-stream-restore
