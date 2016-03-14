@@ -46,6 +46,14 @@ License: LGPL-2.1+ and Apache-2.0
 %description target-tm1
 Multimedia Framework system configuration package including ini, conf and etc files for tm1 target.
 
+%package target-tw1
+Summary: Multimedia Framework system configuration package for tw1
+Group: Multimedia/Configuration
+License: LGPL-2.1+ and Apache-2.0
+
+%description target-tw1
+Multimedia Framework system configuration package including ini, conf and etc files for tw1 target.
+
 
 %else
 
@@ -121,6 +129,17 @@ mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license/%{name}-target-tm1
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license/%{name}-target-tm1
 
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tw1
+cp -arf %{name}-target-tw1/* %{buildroot}%{_datadir}/%{name}-target-tw1
+mv %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/license/%{name}-target-tw1
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/license/%{name}-target-tw1
+
+
 %else
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-simulator
@@ -160,6 +179,10 @@ rm -rf %{_datadir}/mmfw-sysconf-target-hawkp
 %post target-tm1
 cp -arf %{_datadir}/mmfw-sysconf-target-tm1/* /
 rm -rf %{_datadir}/mmfw-sysconf-target-tm1
+
+%post target-tw1
+cp -arf %{_datadir}/mmfw-sysconf-target-tw1/* /
+rm -rf %{_datadir}/mmfw-sysconf-target-tw1
 
 %else
 
@@ -235,6 +258,22 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
 %{_datadir}/mmfw-sysconf-target-tm1/usr/share/license/mmfw-sysconf-target-tm1
+
+%files target-tw1
+%manifest mmfw-sysconf-target-tw1.manifest
+%defattr(-,root,root,-)
+%{_datadir}/mmfw-sysconf-target-tw1/etc/asound.conf
+%{_datadir}/mmfw-sysconf-target-tw1/etc/pulse/*
+%{_datadir}/mmfw-sysconf-target-tw1/etc/murphy/*
+%{_datadir}/mmfw-sysconf-target-tw1/etc/profile.d/*
+%{_datadir}/mmfw-sysconf-target-tw1/usr/etc/*.ini
+%{_datadir}/mmfw-sysconf-target-tw1/usr/etc/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tw1/usr/etc/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tw1/usr/share/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-tw1/usr/share/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-tw1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-tw1/usr/share/license/mmfw-sysconf-target-tw1
+
 
 %else
 
