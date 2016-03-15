@@ -16,7 +16,7 @@ videosrc element remote = shmsrc
 
 video converter element = ffmpegcolorspace
 
-audiosink element = avsysaudiosink
+audiosink element = pulsesink
 
 drmsrc element = filesrc
 
