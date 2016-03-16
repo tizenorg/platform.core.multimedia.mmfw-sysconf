@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.54
+Version:    0.2.55
 Release:    0
 Group:      Multimedia/Configuration
 License:    LGPL-2.1+ and Apache-2.0
@@ -85,59 +85,59 @@ mkdir -p %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3
 cp -arf %{name}-target-u3/* %{buildroot}%{_datadir}/%{name}-target-u3
 %if %{with wayland}
-mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.x
-rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.x
+mv %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x
 %else
-mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.x %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.x %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_player.ini.wayland
-rm %{buildroot}%{_datadir}/%{name}-target-u3/usr/etc/mmfw_camcorder.ini.wayland
+mv %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_player.ini.x %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_player.ini.wayland
+rm %{buildroot}%{_datadir}/%{name}-target-u3%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland
 %endif
-mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license
-cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
-cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-u3/usr/share/license/%{name}-target-u3
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-u3%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-u3%{_datadir}/license/%{name}-target-u3
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-u3%{_datadir}/license/%{name}-target-u3
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-n4
 cp -arf %{name}-target-n4/* %{buildroot}%{_datadir}/%{name}-target-n4
-mv %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_player.ini.x
-rm %{buildroot}%{_datadir}/%{name}-target-n4/usr/etc/mmfw_camcorder.ini.x
-mkdir -p %{buildroot}%{_datadir}/%{name}-target-n4/usr/share/license
-cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-n4/usr/share/license/%{name}-target-n4
-cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-n4/usr/share/license/%{name}-target-n4
+mv %{buildroot}%{_datadir}/%{name}-target-n4%{_sysconfdir}/multimedia/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-n4%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-n4%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-n4%{_sysconfdir}/multimedia/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-n4%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-n4%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-n4%{_datadir}/license/%{name}-target-n4
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-n4%{_datadir}/license/%{name}-target-n4
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-hawkp
 cp -arf %{name}-target-hawkp/* %{buildroot}%{_datadir}/%{name}-target-hawkp
-mv %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/etc/mmfw_player.ini.x
-rm %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/etc/mmfw_camcorder.ini.x
-mkdir -p %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license
-cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
-cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-hawkp/usr/share/license/%{name}-target-hawkp
+mv %{buildroot}%{_datadir}/%{name}-target-hawkp%{_sysconfdir}/multimedia/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-hawkp%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-hawkp%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-hawkp%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-hawkp%{_sysconfdir}/multimedia/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-hawkp%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-hawkp%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-hawkp%{_datadir}/license/%{name}-target-hawkp
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-hawkp%{_datadir}/license/%{name}-target-hawkp
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1
 cp -arf %{name}-target-tm1/* %{buildroot}%{_datadir}/%{name}-target-tm1
-mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_player.ini.x
-rm %{buildroot}%{_datadir}/%{name}-target-tm1/usr/etc/mmfw_camcorder.ini.x
-mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license
-cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license/%{name}-target-tm1
-cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tm1/usr/share/license/%{name}-target-tm1
+mv %{buildroot}%{_datadir}/%{name}-target-tm1%{_sysconfdir}/multimedia/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-tm1%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tm1%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-tm1%{_sysconfdir}/multimedia/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-tm1%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tm1%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tm1%{_datadir}/license/%{name}-target-tm1
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tm1%{_datadir}/license/%{name}-target-tm1
 
 mkdir -p %{buildroot}%{_datadir}/%{name}-target-tw1
 cp -arf %{name}-target-tw1/* %{buildroot}%{_datadir}/%{name}-target-tw1
-mv %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_player.ini.x
-rm %{buildroot}%{_datadir}/%{name}-target-tw1/usr/etc/mmfw_camcorder.ini.x
-mkdir -p %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/license
-cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/license/%{name}-target-tw1
-cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/license/%{name}-target-tw1
+mv %{buildroot}%{_datadir}/%{name}-target-tw1%{_sysconfdir}/multimedia/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tw1%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-target-tw1%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-target-tw1%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-target-tw1%{_sysconfdir}/multimedia/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-target-tw1%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-tw1%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tw1%{_datadir}/license/%{name}-target-tw1
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tw1%{_datadir}/license/%{name}-target-tw1
 
 
 %else
@@ -145,19 +145,19 @@ cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tw1/usr/share/lic
 mkdir -p %{buildroot}%{_datadir}/%{name}-simulator
 cp -arf %{name}-simulator/* %{buildroot}%{_datadir}/%{name}-simulator
 %if %{with wayland}
-mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.x
-rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.x
+mv %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_player.ini.wayland %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_player.ini.x
+rm %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x
 %else
-mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.x %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini
-mv %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.x %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini
-rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_player.ini.wayland
-rm %{buildroot}%{_datadir}/%{name}-simulator/usr/etc/mmfw_camcorder.ini.wayland
+mv %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_player.ini.x %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_player.ini
+mv %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_camcorder.ini.x %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_camcorder.ini
+rm %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_player.ini.wayland
+rm %{buildroot}%{_datadir}/%{name}-simulator%{_sysconfdir}/multimedia/mmfw_camcorder.ini.wayland
 %endif
-mkdir -p %{buildroot}%{_datadir}/%{name}-simulator/usr/share/license
-cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-simulator/usr/share/license/%{name}-simulator
-cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-simulator/usr/share/license/%{name}-simulator
+mkdir -p %{buildroot}%{_datadir}/%{name}-simulator%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-simulator%{_datadir}/license/%{name}-simulator
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-simulator%{_datadir}/license/%{name}-simulator
 
 %endif
 
@@ -201,78 +201,78 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %files target-u3
 %manifest mmfw-sysconf-target-u3.manifest
 %defattr(-,root,root,-)
-%{_datadir}/mmfw-sysconf-target-u3/etc/asound.conf
-%{_datadir}/mmfw-sysconf-target-u3/etc/pulse/*
-%{_datadir}/mmfw-sysconf-target-u3/etc/murphy/*
-%{_datadir}/mmfw-sysconf-target-u3/etc/profile.d/*
-%{_datadir}/mmfw-sysconf-target-u3/usr/etc/*.ini
-%{_datadir}/mmfw-sysconf-target-u3/usr/etc/gst-openmax.conf
-%{_datadir}/mmfw-sysconf-target-u3/usr/etc/gst-tz-openmax.conf
-%{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/paths/*.conf
-%{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/paths/*.common
-%{_datadir}/mmfw-sysconf-target-u3/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-u3/usr/share/license/mmfw-sysconf-target-u3
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/multimedia/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-u3%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-u3%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-u3%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-u3%{_datadir}/license/mmfw-sysconf-target-u3
 
 %files target-n4
 %manifest mmfw-sysconf-target-n4.manifest
 %defattr(-,root,root,-)
-%{_datadir}/mmfw-sysconf-target-n4/etc/asound.conf
-%{_datadir}/mmfw-sysconf-target-n4/etc/pulse/*
-%{_datadir}/mmfw-sysconf-target-n4/etc/murphy/*
-%{_datadir}/mmfw-sysconf-target-n4/etc/profile.d/*
-%{_datadir}/mmfw-sysconf-target-n4/usr/etc/*.ini
-%{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-openmax.conf
-%{_datadir}/mmfw-sysconf-target-n4/usr/etc/gst-tz-openmax.conf
-%{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/paths/*.conf
-%{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/paths/*.common
-%{_datadir}/mmfw-sysconf-target-n4/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-n4/usr/share/license/mmfw-sysconf-target-n4
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/multimedia/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-n4%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-n4%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-n4%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-n4%{_datadir}/license/mmfw-sysconf-target-n4
 
 %files target-hawkp
 %manifest mmfw-sysconf-target-hawkp.manifest
 %defattr(-,root,root,-)
-%{_datadir}/mmfw-sysconf-target-hawkp/etc/asound.conf
-%{_datadir}/mmfw-sysconf-target-hawkp/etc/pulse/*
-%{_datadir}/mmfw-sysconf-target-hawkp/etc/murphy/*
-%{_datadir}/mmfw-sysconf-target-hawkp/etc/profile.d/*
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/etc/*.ini
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/etc/gst-openmax.conf
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/etc/gst-tz-openmax.conf
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/share/pulseaudio/alsa-mixer/paths/*.conf
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/share/pulseaudio/alsa-mixer/paths/*.common
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-hawkp/usr/share/license/mmfw-sysconf-target-hawkp
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/multimedia/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/license/mmfw-sysconf-target-hawkp
 
 %files target-tm1
 %manifest mmfw-sysconf-target-tm1.manifest
 %defattr(-,root,root,-)
-%{_datadir}/mmfw-sysconf-target-tm1/etc/asound.conf
-%{_datadir}/mmfw-sysconf-target-tm1/etc/pulse/*
-%{_datadir}/mmfw-sysconf-target-tm1/etc/murphy/*
-%{_datadir}/mmfw-sysconf-target-tm1/etc/profile.d/*
-%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/*.ini
-%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/gst-openmax.conf
-%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/gst-tz-openmax.conf
-%{_datadir}/mmfw-sysconf-target-tm1/usr/etc/audio_hw.xml
-%{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.conf
-%{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/paths/*.common
-%{_datadir}/mmfw-sysconf-target-tm1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-tm1/usr/share/license/mmfw-sysconf-target-tm1
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/audio_hw.xml
+%{_datadir}/mmfw-sysconf-target-tm1%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-tm1%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-tm1%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-tm1%{_datadir}/license/mmfw-sysconf-target-tm1
 
 %files target-tw1
 %manifest mmfw-sysconf-target-tw1.manifest
 %defattr(-,root,root,-)
-%{_datadir}/mmfw-sysconf-target-tw1/etc/asound.conf
-%{_datadir}/mmfw-sysconf-target-tw1/etc/pulse/*
-%{_datadir}/mmfw-sysconf-target-tw1/etc/murphy/*
-%{_datadir}/mmfw-sysconf-target-tw1/etc/profile.d/*
-%{_datadir}/mmfw-sysconf-target-tw1/usr/etc/*.ini
-%{_datadir}/mmfw-sysconf-target-tw1/usr/etc/gst-openmax.conf
-%{_datadir}/mmfw-sysconf-target-tw1/usr/etc/gst-tz-openmax.conf
-%{_datadir}/mmfw-sysconf-target-tw1/usr/share/pulseaudio/alsa-mixer/paths/*.conf
-%{_datadir}/mmfw-sysconf-target-tw1/usr/share/pulseaudio/alsa-mixer/paths/*.common
-%{_datadir}/mmfw-sysconf-target-tw1/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-target-tw1/usr/share/license/mmfw-sysconf-target-tw1
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/multimedia/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/license/mmfw-sysconf-target-tw1
 
 
 %else
@@ -280,16 +280,16 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %files simulator
 %manifest mmfw-sysconf-simulator.manifest
 %defattr(-,root,root,-)
-%{_datadir}/mmfw-sysconf-simulator/etc/asound.conf
-%{_datadir}/mmfw-sysconf-simulator/etc/pulse/*
-%{_datadir}/mmfw-sysconf-simulator/etc/murphy/*
-%{_datadir}/mmfw-sysconf-simulator/etc/profile.d/*
-%{_datadir}/mmfw-sysconf-simulator/usr/etc/*.ini
-%{_datadir}/mmfw-sysconf-simulator/usr/etc/gst-openmax.conf
-%{_datadir}/mmfw-sysconf-simulator/usr/share/pulseaudio/alsa-mixer/paths/*.conf
-%{_datadir}/mmfw-sysconf-simulator/usr/share/pulseaudio/alsa-mixer/paths/*.common
-%{_datadir}/mmfw-sysconf-simulator/usr/share/pulseaudio/alsa-mixer/profile-sets/*.conf
-%{_datadir}/mmfw-sysconf-simulator/usr/share/license/mmfw-sysconf-simulator
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-simulator%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-simulator%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-simulator%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-simulator%{_datadir}/license/mmfw-sysconf-simulator
 
 %endif
 
