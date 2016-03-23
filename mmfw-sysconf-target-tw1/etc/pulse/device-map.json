@@ -19,7 +19,7 @@
 		"capture-devices":[
 			{
 				"device-string":"alsa:0,0",
-				"role":{"normal":"rate=48000"}
+				"role":{"normal":"rate=48000 tsched=0 fragments=4 fragment_size=24000"}
 			}
 		]
 	}
