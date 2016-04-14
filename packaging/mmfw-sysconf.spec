@@ -2,7 +2,7 @@
 
 Name:       mmfw-sysconf
 Summary:    Multimedia Framework system configuration package
-Version:    0.2.58
+Version:    0.2.59
 Release:    0
 Group:      Multimedia/Configuration
 License:    LGPL-2.1+ and Apache-2.0
@@ -53,6 +53,14 @@ License: LGPL-2.1+ and Apache-2.0
 
 %description target-tw1
 Multimedia Framework system configuration package including ini, conf and etc files for tw1 target.
+
+%package target-artik10
+Summary: Multimedia Framework system configuration package for artik 10
+Group: Multimedia/Configuration
+License: LGPL-2.1+ and Apache-2.0
+
+%description target-artik10
+Multimedia Framework system configuration package including ini, conf and etc files for artik 10 target.
 
 
 %else
@@ -139,6 +147,11 @@ mkdir -p %{buildroot}%{_datadir}/%{name}-target-tw1%{_datadir}/license
 cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-tw1%{_datadir}/license/%{name}-target-tw1
 cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-tw1%{_datadir}/license/%{name}-target-tw1
 
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-artik10
+cp -arf %{name}-target-artik10/* %{buildroot}%{_datadir}/%{name}-target-artik10
+mkdir -p %{buildroot}%{_datadir}/%{name}-target-artik10%{_datadir}/license
+cp LICENSE.APLv2.0 %{buildroot}%{_datadir}/%{name}-target-artik10%{_datadir}/license/%{name}-target-artik10
+cat LICENSE.LGPLv2.1 >> %{buildroot}%{_datadir}/%{name}-target-artik10%{_datadir}/license/%{name}-target-artik10
 
 %else
 
@@ -183,6 +196,10 @@ rm -rf %{_datadir}/mmfw-sysconf-target-tm1
 %post target-tw1
 cp -arf %{_datadir}/mmfw-sysconf-target-tw1/* /
 rm -rf %{_datadir}/mmfw-sysconf-target-tw1
+
+%post target-artik10
+cp -arf %{_datadir}/mmfw-sysconf-target-artik10/* /
+rm -rf %{_datadir}/mmfw-sysconf-target-artik10
 
 %else
 
@@ -274,6 +291,20 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
 %{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/license/mmfw-sysconf-target-tw1
 
+%files target-artik10
+%manifest mmfw-sysconf-target-artik10.manifest
+%defattr(-,root,root,-)
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/asound.conf
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/pulse/*
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/murphy/*
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/profile.d/*
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/multimedia/gst-openmax.conf
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/multimedia/gst-tz-openmax.conf
+%{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
+%{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
+%{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
+%{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/license/mmfw-sysconf-target-artik10
 
 %else
 
