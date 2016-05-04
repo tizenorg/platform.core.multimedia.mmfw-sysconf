@@ -56,8 +56,8 @@ eos delay = 150 ; msec
 
 httpsrc element = souphttpsrc
 
-; if set, use file or not use memory for buffering
-http file buffer path = /home/owner/content
+; if yes, mmplayer will use temp file for buffering
+http use file buffer = no
 
 http buffering limit = 99.0 ; percent
 
