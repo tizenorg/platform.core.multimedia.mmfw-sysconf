@@ -72,7 +72,7 @@
 			{
 				"device-string":"alsa:0,0",
 				"role":{
-						"normal":"rate=44100",
+						"normal":"mmap=0 rate=44100",
 				}
 			}
 		],
