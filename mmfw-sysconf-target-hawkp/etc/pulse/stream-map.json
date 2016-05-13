@@ -189,7 +189,7 @@
 			"volume-types":{"in":"none","out":"none"},
 			"avail-in-devices":["none"],
 			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
-			"avail-frameworks":["wav-player","tone-player"],
+			"avail-frameworks":["wav-player","tone-player","sound-manager"],
 		},
 	]
 }
