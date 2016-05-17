@@ -25,8 +25,8 @@ load-module module-udev-detect
 ### Load several protocols
 load-module module-native-protocol-unix auth-anonymous=1
 
-### Load module-policy
-load-module module-policy
+### Load module-tizenaudio-policy
+load-module module-tizenaudio-policy
 
 ### Sound Player module
 load-module module-sound-player
