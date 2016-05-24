@@ -54,6 +54,7 @@ VideosinkElementRemote = shmsink | 5,0 | wait-for-connection,0 | perms,511 | ena
 VideosinkElementNull = fakesink | 4,0 | qos,0 | sync,0 | enable-last-sample,0 | show-preroll-frame,0
 UseVideoscale = 1
 VideoscaleElement = fimcconvert | 1,0 | rotang,0
+VideodecoderElementH264 = avdec_h264 | 0,0
 
 [VideoEncoder]
 MPEG4 = avenc_mpeg4 | 0,0
