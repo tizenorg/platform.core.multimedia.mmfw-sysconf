@@ -44,7 +44,7 @@
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"media"},
 			"avail-in-devices":["audio-jack","builtin-mic"],
-			"avail-out-devices":["forwarding","audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["forwarding","audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io","recorder"],
 		},
 		{
@@ -53,7 +53,7 @@
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"system"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["forwarding","audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["forwarding","audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
@@ -62,7 +62,7 @@
 			"route-type" : "auto-all",
 			"volume-types":{"in":"none","out":"alarm"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
@@ -71,7 +71,7 @@
 			"route-type" : "auto-all",
 			"volume-types":{"in":"none","out":"notification"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
@@ -89,7 +89,7 @@
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"voice"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
@@ -107,7 +107,7 @@
 			"route-type" : "auto-all",
 			"volume-types":{"in":"none","out":"ringtone"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io","sound-manager"],
 		},
 		{
@@ -116,7 +116,7 @@
 			"route-type" : "auto-all",
 			"volume-types":{"in":"none","out":"ringtone"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["player","wav-player","tone-player","audio-io"],
 		},
 		{
@@ -125,7 +125,7 @@
 			"route-type" : "manual",
 			"volume-types":{"in":"none","out":"voip"},
 			"avail-in-devices":["audio-jack","bt","builtin-mic"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
 			"avail-frameworks":["audio-io","tone-player","sound-manager"],
 		},
 		{
@@ -134,7 +134,7 @@
 			"route-type" : "manual",
 			"volume-types":{"in":"none","out":"call"},
 			"avail-in-devices":["audio-jack","bt","builtin-mic"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
 			"avail-frameworks":["sound-manager"],
 		},
 		{
@@ -143,7 +143,7 @@
 			"route-type" : "manual",
 			"volume-types":{"in":"none","out":"call"},
 			"avail-in-devices":["audio-jack","bt","builtin-mic"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker"],
 			"avail-frameworks":["sound-manager"],
 		},
 		{
@@ -188,7 +188,7 @@
 			"route-type" : "auto",
 			"volume-types":{"in":"none","out":"none"},
 			"avail-in-devices":["none"],
-			"avail-out-devices":["audio-jack","builtin-speaker","bt","usb-audio"],
+			"avail-out-devices":["audio-jack","bt","builtin-speaker","usb-audio"],
 			"avail-frameworks":["wav-player","tone-player"],
 		},
 	]
