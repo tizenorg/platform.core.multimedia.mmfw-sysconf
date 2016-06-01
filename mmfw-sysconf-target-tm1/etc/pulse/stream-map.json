@@ -6,7 +6,7 @@
 		},
 		{
 			"type":"media",
-			"is-hal-volume":0,
+			"is-hal-volume":1,
 		},
 		{
 			"type":"system",
