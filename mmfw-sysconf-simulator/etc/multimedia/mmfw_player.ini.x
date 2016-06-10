@@ -49,6 +49,8 @@ localplayback state change timeout = 10 ; sec
 ; delay in msec for sending EOS
 eos delay = 150 ; msec
 
+; extracted pcm buffer size
+pcm buffer size = 51200 ; 50Kbytes
 
 [http streaming]
 

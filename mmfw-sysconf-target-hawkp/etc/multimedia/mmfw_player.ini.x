@@ -60,6 +60,9 @@ eos delay = 0 ; msec
 ; for asm function enable = yes, disable = no
 enable asm = yes
 
+; extracted pcm buffer size
+pcm buffer size = 51200 ; 50Kbytes
+
 [http streaming]
 
 httpsrc element = souphttpsrc
