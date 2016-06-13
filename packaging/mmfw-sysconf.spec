@@ -189,6 +189,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-u3%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-target-u3%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-u3%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-u3%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
@@ -202,6 +203,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-n4%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-target-n4%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-n4%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-n4%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
@@ -215,6 +217,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-hawkp%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-hawkp%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
@@ -228,6 +231,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-target-tm1%{_sysconfdir}/multimedia/audio_hw.xml
 %{_datadir}/mmfw-sysconf-target-tm1%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-tm1%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
@@ -242,6 +246,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-tw1%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-tw1%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
@@ -255,6 +260,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-target-artik10%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-target-artik10%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
@@ -270,6 +276,7 @@ rm -rf %{_datadir}/mmfw-sysconf-simulator
 %{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/murphy/*
 %{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/profile.d/*
 %{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/multimedia/*.ini
+%{_datadir}/mmfw-sysconf-simulator%{_sysconfdir}/multimedia/*.conf
 %{_datadir}/mmfw-sysconf-simulator%{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/mmfw-sysconf-simulator%{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/mmfw-sysconf-simulator%{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
