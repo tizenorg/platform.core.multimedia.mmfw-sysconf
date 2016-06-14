@@ -1,4 +1,38 @@
 {
+	"latencies":[
+		{
+			"type":"low",
+			"fragsize-ms":25,
+			"minreq-ms":-1,
+			"tlength-ms":100,
+			"prebuf-ms":0,
+			"maxlength":-1,
+		},
+		{
+			"type":"mid",
+			"fragsize-ms":50,
+			"minreq-ms":-1,
+			"tlength-ms":200,
+			"prebuf-ms":0,
+			"maxlength":-1,
+		},
+		{
+			"type":"high",
+			"fragsize-ms":75,
+			"minreq-ms":-1,
+			"tlength-ms":400,
+			"prebuf-ms":0,
+			"maxlength":-1,
+		},
+		{
+			"type":"voip",
+			"fragsize-ms":20,
+			"minreq-ms":20,
+			"tlength-ms":100,
+			"prebuf-ms":0,
+			"maxlength":-1,
+		},
+	],
 	"volumes":[
 		{
 			"type":"master",
