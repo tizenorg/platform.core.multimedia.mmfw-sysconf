@@ -30,7 +30,7 @@ load-module module-tizenaudio-policy
 
 ### Sound Player module
 load-module module-sound-player
-load-module module-role-ducking global=1 trigger_roles=solo ducking_roles=media,system,alarm,notification,voice-information,ext-media volume=0%
+load-module module-role-ducking global=1 trigger_roles=solo/notification ducking_roles=media,system,alarm,notification,voice-information,ext-media/media,ext-media volume=0%/25% fade_in=0/1000 fade_out=0/1000
 
 load-module module-bluetooth-policy
 load-module module-bluetooth-discover
